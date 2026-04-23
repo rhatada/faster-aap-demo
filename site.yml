@@ -1,0 +1,14 @@
+---
+- name: Read and debug text file
+  hosts: local
+  gather_facts: false
+
+  tasks:
+    - name: Read text file
+      ansible.builtin.slurp:
+        src: "{{ playbook_dir }}/message.txt"
+      register: file_content
+
+    - name: Debug file content
+      ansible.builtin.debug:
+        msg: "{{ file_content.content | b64decode }}"

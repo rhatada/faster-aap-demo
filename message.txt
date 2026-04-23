@@ -1,0 +1,2 @@
+Hello from Ansible demo!
+This is a sample text file.
