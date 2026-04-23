@@ -1,6 +1,6 @@
 ---
 - name: Read and debug text file
-  hosts: local
+  hosts: localhost
   gather_facts: false
 
   tasks:
